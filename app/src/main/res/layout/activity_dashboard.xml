@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="60dp"
+    tools:context=".ui.general.DashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello Venu"
+                    android:id="@+id/nickname_tv"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:textColor="#292929"
+                    android:textSize="26sp"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/setting_iv"
+                    android:src="@drawable/baseline_app_settings_alt_24"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How are you today?"
+                android:fontFamily="@font/raleway_medium"
+                android:textColor="@color/grey_6e"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"/>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/asses_mcv"
+                android:clickable="true"
+                android:focusable="true"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/black"
+                app:rippleColor="@color/purple_200"
+                android:backgroundTint="@color/white">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/assess_my_state"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/raleway_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/next_ico"
+                        app:tint="@color/black"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What would you like to work on today?"
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="@color/grey_6e"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerView"
+            tools:listitem="@layout/emotion_item"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

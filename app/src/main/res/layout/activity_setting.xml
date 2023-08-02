@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp"
+    tools:context=".ui.intro.SettingActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back_iv"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Venu"
+        android:textSize="46sp"
+        android:id="@+id/nickname_tv"
+        android:fontFamily="@font/raleway_semibold"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/back_iv"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/baseline_edit_24"
+        android:background="@drawable/et_bg"
+        android:padding="3dp"
+        app:tint="@color/green_800"
+        android:backgroundTint="@color/green_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nickname_tv"
+        app:layout_constraintBottom_toBottomOf="@id/nickname_tv"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nickname_tv"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/info_tv"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/grey_6e"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/nickname_instruction"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/info_tv"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="20dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:tint="@color/green_800"
+                    android:src="@drawable/baseline_history_24"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save chat history"
+                    android:textSize="18sp"
+                    android:textColor="@color/green_800"
+                    android:fontFamily="@font/raleway_medium"
+                    android:layout_marginStart="10dp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:tint="@color/green_800"
+                    app:thumbTint="@color/green_100"
+                    android:src="@drawable/next_ico"
+                    android:layout_marginEnd="20dp"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="20dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+                
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:tint="@color/green_800"
+                    android:src="@drawable/baseline_help_24"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help"
+                    android:textSize="18sp"
+                    android:textColor="@color/green_800"
+                    android:fontFamily="@font/raleway_medium"
+                    android:layout_marginStart="10dp"/>
+                
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:tint="@color/green_800"
+                    android:src="@drawable/next_ico"
+                    android:layout_marginEnd="20dp"/>
+                
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="20dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:tint="@color/green_800"
+                    android:src="@drawable/baseline_star_rate_24"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rate"
+                    android:textSize="18sp"
+                    android:textColor="@color/green_800"
+                    android:fontFamily="@font/raleway_medium"
+                    android:layout_marginStart="10dp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:tint="@color/green_800"
+                    android:src="@drawable/next_ico"
+                    android:layout_marginEnd="20dp"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="20dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/red_300"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:tint="@color/black"
+                    android:src="@drawable/baseline_delete_24"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Session"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/raleway_medium"
+                    android:layout_marginStart="10dp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:tint="@color/black"
+                    android:src="@drawable/next_ico"
+                    android:layout_marginEnd="20dp"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

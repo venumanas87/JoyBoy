@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">JoyBoy</string>
+    <string name="welcome_to_joyboy">Welcome to JoyBoy</string>
+    <string name="we_are_here_to_help_you_to_be_stress_free_and_nurture_yourself">We are here to help you to be stress free and nurture yourself</string>
+    <string name="we_don_t_need_any_of_your_personal_details_just_choose_a_nickname_and_we_can_proceed_to_the_world_of_joy">We don\'t need any of your personal details. Just choose a nickname and we can proceed to the world of Joy.</string>
+    <string name="assess_my_state">Assess my state</string>
+    <string name="anxiety">Anxiety</string>
+    <string name="exam_stress">Exam Stress</string>
+    <string name="not_at_all">Not at all</string>
+    <string name="several_days">Several days</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="overall_status">Overall Status</string>
+    <string name="nickname_instruction">The nickname specified is used to create your unique id and is not synced with our servers.</string>
+    <string name="help">Help</string>
+    <string name="rate">Rate</string>
+</resources>

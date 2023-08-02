@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.intro.AuthActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/titletop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="JoyBoy cares about your anonymity"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/desctext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="@string/we_don_t_need_any_of_your_personal_details_just_choose_a_nickname_and_we_can_proceed_to_the_world_of_joy"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titletop" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="100dp"/>
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="-30dp"
+            app:layout_constraintBottom_toTopOf="@id/editTextTextPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:lottie_rawRes="@raw/drone"
+            android:layout_marginStart="30dp"
+            app:lottie_speed="0.8"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/et_bg"
+                android:fontFamily="@font/raleway_semibold"
+                android:inputType="textCapSentences"
+                android:paddingStart="20dp"
+                android:maxLength="10"
+                android:paddingEnd="10dp"
+                android:textColor="@color/grey_med"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/proceed_rl"
+                android:visibility="gone"
+                android:background="@drawable/et_bg"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/grey_med">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_arrow_forward_24"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/desctexdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="We do send some data to the server for betterment of the service we provide to you."
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+</ScrollView>

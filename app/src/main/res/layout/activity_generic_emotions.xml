@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.emotions.GenericEmotionsActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back_iv"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_marginStart="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_centerVertical="true"/>
+
+        <app.rive.runtime.kotlin.RiveAnimationView
+            android:id="@+id/icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            app:riveAutoPlay="false"
+            app:riveFit="FILL"
+            app:riveResource="@raw/look" />
+
+
+    </RelativeLayout>
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="10dp"
+        android:clipChildren="true"
+        app:strokeWidth="0dp"
+        android:padding="0dp"
+        android:clipToPadding="true"
+        app:cardElevation="0dp"
+        android:backgroundTint="@color/white">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.MainActivity">
+
+
+            <RelativeLayout
+                android:id="@+id/bgCircleInc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="#1B1B1B"
+                android:visibility="invisible" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutAnimation="@anim/layout_anim_rv"
+                android:layout_above="@id/boxcont" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/typing"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_above="@id/boxcont"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="100dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/typing"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:layout_marginVertical="10dp"
+                android:id="@+id/boxcont">
+
+                <EditText
+                    android:id="@+id/edit_query"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="70dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@drawable/et_bg"
+                    android:hint="@string/type_a_message"
+                    android:inputType="textLongMessage"
+                    android:textColor="@color/grey_med"
+                    android:textColorHint="#6E6E6E" />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="100dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/send"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/white"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="2dp"
+                    android:layout_alignParentEnd="true">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_send_24"
+                        android:layout_gravity="center"
+                        />
+
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/white"
+                app:borderWidth="0dp"
+                app:fabCustomSize="60dp"
+                android:src="@drawable/ic_baseline_mic_24"
+                android:id="@+id/fab"/>
+
+
+            <!--   <com.google.android.material.card.MaterialCardView-->
+            <!--       android:id="@+id/fab"-->
+            <!--       android:layout_width="70dp"-->
+            <!--       android:layout_height="70dp"-->
+            <!--       android:layout_alignParentBottom="true"-->
+            <!--       android:layout_centerHorizontal="true"-->
+            <!--       android:layout_marginBottom="20dp"-->
+            <!--       android:backgroundTint="@color/white"-->
+            <!--       app:cardCornerRadius="100dp">-->
+
+            <!--    <ImageView-->
+            <!--        android:layout_width="30dp"-->
+            <!--        android:layout_height="30dp"-->
+            <!--        android:layout_gravity="center"-->
+            <!--        android:src="@drawable/mic"-->
+            <!--        app:tint="@color/colorPrimary" />-->
+
+            <!--   </com.google.android.material.card.MaterialCardView>-->
+
+
+            <ImageView
+                android:id="@+id/keyboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/fab"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_baseline_keyboard_24"
+                app:tint="@color/grey_med" />
+
+
+            <RelativeLayout
+                android:id="@+id/cardFab"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:elevation="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/stt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/raleway"
+                    android:textColor="@color/light_grey"
+                    android:textSize="24sp" />
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/close"
+                    android:src="@drawable/baseline_close_24"
+                    app:tint="@color/grey_med"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="80dp"
+                    android:gravity="center">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginVertical="10dp"
+                        android:backgroundTint="@color/white"
+                        android:src="@drawable/ic_baseline_replay_24"
+                        app:borderWidth="0dp"
+                        app:tint="@color/light_grey" />
+
+
+                </LinearLayout>
+
+
+
+                <app.rive.runtime.kotlin.RiveAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:riveAutoPlay="true"
+                    android:id="@+id/rive"
+                    app:riveLoop="LOOP"
+                    android:layout_alignParentBottom="true"
+                    app:riveFit="FILL"
+                    app:riveResource="@raw/listening" />
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+</RelativeLayout>
